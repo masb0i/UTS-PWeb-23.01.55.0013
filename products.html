@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Studio Nada</title>
+    <!-- BOOTSTRAP CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR  -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand me-auto" href="index.html">StudioNada</a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              Studio Nada
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link mx-lg-2"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2 active" href="products.html"
+                  >Product</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="order.html">Order</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="login.html" class="login-button">Login</a>
+        <button
+          class="navbar-toggler pe-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- KONTEN DETAIL PRODUK -->
+    <section class="product-detail my-5 pt-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Products</h2>
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <!-- Carousel untuk Product 1 -->
+              <div
+                id="carousel1"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+              >
+                <div class="carousel-inner rounded-top">
+                  <div class="carousel-item active">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/hpn 1.png"
+                        alt="OneOdio A70 Headphone Blue"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/1 slide 2.png"
+                        alt="OneOdio A70 Headphone Grey"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold">OneOdio A70 Headphone</h5>
+                <p class="fw-semibold fs-5" style="color: #e69816">
+                  IDR 1.254.430
+                </p>
+
+                <!-- Quantity Selector -->
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="text-secondary">Jumlah:</span>
+                  <div class="d-flex align-items-center gap-2">
+                    <button
+                      onclick="decreaseQuantity('quantity1')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <span class="fs-5 fw-semibold px-2" id="quantity1">1</span>
+                    <button
+                      onclick="increaseQuantity('quantity1')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Product Info Accordion -->
+                <div class="mb-3">
+                  <!-- Description -->
+                  <div class="accordion" id="descriptionAccordion1">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#description1"
+                        >
+                          Deskripsi
+                        </button>
+                      </h2>
+                      <div
+                        id="description1"
+                        class="accordion-collapse collapse"
+                      >
+                        <div class="accordion-body">
+                          OneOdio A70 Bluetooth Over Ear Headphones, Wireless
+                          Headphones w/ 72H Playtime, Hi-Res, 3.5mm/6.35mm Wired
+                          Audio Jack for Studio Monitor & Mixing DJ Guitar AMP,
+                          Computer Laptop PC Tablet.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Specifications -->
+                  <div class="accordion mt-2" id="specsAccordion1">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#specs1"
+                        >
+                          Spesifikasi
+                        </button>
+                      </h2>
+                      <div id="specs1" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled mb-0">
+                            <li>Brand: OneOdio</li>
+                            <li>Color: Sky Blue, Silver</li>
+                            <li>Ear Placement: Over Ea</li>
+                            <li>Form Factor: Over Ea</li>
+                            <li>Impedance: 32 Ohm</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  onclick="window.location.href='order.html'"
+                  class="btn w-100"
+                  style="background-color: #e69816; color: white"
+                >
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <!-- Carousel untuk Product 2 -->
+              <div
+                id="carousel2"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+              >
+                <div class="carousel-inner rounded-top">
+                  <div class="carousel-item active">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/hpn 2.png"
+                        alt="Ozeino Wireless Gaming Black"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/2 slide 2.png"
+                        alt="Ozeino Wireless Gaming Pink"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Ozeino Wireless Gaming</h5>
+                <p class="fw-semibold fs-5" style="color: #e69816">
+                  IDR 627.443
+                </p>
+
+                <!-- Quantity Selector -->
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="text-secondary">Jumlah:</span>
+                  <div class="d-flex align-items-center gap-2">
+                    <button
+                      onclick="decreaseQuantity('quantity2')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <span class="fs-5 fw-semibold px-2" id="quantity2">1</span>
+                    <button
+                      onclick="increaseQuantity('quantity2')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Product Info Accordion -->
+                <div class="mb-3">
+                  <!-- Description -->
+                  <div class="accordion" id="descriptionAccordion1">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#description2"
+                        >
+                          Deskripsi
+                        </button>
+                      </h2>
+                      <div
+                        id="description2"
+                        class="accordion-collapse collapse"
+                      >
+                        <div class="accordion-body">
+                          2.4GHz Wireless Gaming Headset with Microphone, 2.4G
+                          USB & Type C Transmitter - 30h Battery Life - RGB
+                          Lighting Gaming Headphones for PS5, PS4, PC, Phone.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Specifications -->
+                  <div class="accordion mt-2" id="specsAccordion2">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#specs2"
+                        >
+                          Spesifikasi
+                        </button>
+                      </h2>
+                      <div id="specs2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled mb-0">
+                            <li>Brand: Ozeino</li>
+                            <li>Color: Black, Pink</li>
+                            <li>Ear Placement: Over Ear</li>
+                            <li>Form Factor: Over Ear</li>
+                            <li>Noise Control: Active Noise Cancellation</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  onclick="window.location.href='order.html'"
+                  class="btn w-100"
+                  style="background-color: #e69816; color: white"
+                >
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <!-- Carousel untuk Product 3 -->
+              <div
+                id="carousel3"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+              >
+                <div class="carousel-inner rounded-top">
+                  <div class="carousel-item active">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/hpn 3.png"
+                        alt="BT037 Sports Stereo Beige"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/3 slide 3.png"
+                        alt="BT037 Sports Stereo Black"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold">BT037 Sports Stereo</h5>
+                <p class="fw-semibold fs-5" style="color: #e69816">
+                  IDR 492.000
+                </p>
+
+                <!-- Quantity Selector -->
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="text-secondary">Jumlah:</span>
+                  <div class="d-flex align-items-center gap-2">
+                    <button
+                      onclick="decreaseQuantity('quantity3')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <span class="fs-5 fw-semibold px-2" id="quantity3">1</span>
+                    <button
+                      onclick="increaseQuantity('quantity3')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Product Info Accordion -->
+                <div class="mb-3">
+                  <!-- Description -->
+                  <div class="accordion" id="descriptionAccordion3">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#description3"
+                        >
+                          Deskripsi
+                        </button>
+                      </h2>
+                      <div
+                        id="description3"
+                        class="accordion-collapse collapse"
+                      >
+                        <div class="accordion-body">
+                          BT037 Sports Stereo Wireless Bluetooth ANC Noise
+                          Reduction Headphones.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Specifications -->
+                  <div class="accordion mt-2" id="specsAccordion3">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#specs3"
+                        >
+                          Spesifikasi
+                        </button>
+                      </h2>
+                      <div id="specs3" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled mb-0">
+                            <li>Bluetooth standard: V5.3</li>
+                            <li>Color: Beige, Black</li>
+                            <li>Effective range: 10 meters</li>
+                            <li>Battery capacity: 500mAh</li>
+                            <li>Impedance: 32 ohms</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  onclick="window.location.href='order.html'"
+                  class="btn w-100"
+                  style="background-color: #e69816; color: white"
+                >
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <!-- Carousel untuk Product 4 -->
+              <div
+                id="carousel4"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+              >
+                <div class="carousel-inner rounded-top">
+                  <div class="carousel-item active">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/hpn 4.png"
+                        alt="FEDAI TRN MT1 BLACK"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/4 slide 2.png"
+                        alt="FEDAI TRN MT1 GREEN"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold">FEDAI TRN MT1</h5>
+                <p class="fw-semibold fs-5" style="color: #e69816">
+                  IDR 234.565
+                </p>
+
+                <!-- Quantity Selector -->
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="text-secondary">Jumlah:</span>
+                  <div class="d-flex align-items-center gap-2">
+                    <button
+                      onclick="decreaseQuantity('quantity4')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <span class="fs-5 fw-semibold px-2" id="quantity4">1</span>
+                    <button
+                      onclick="increaseQuantity('quantity4')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Product Info Accordion -->
+                <div class="mb-3">
+                  <!-- Description -->
+                  <div class="accordion" id="descriptionAccordion4">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#description4"
+                        >
+                          Deskripsi
+                        </button>
+                      </h2>
+                      <div
+                        id="description4"
+                        class="accordion-collapse collapse"
+                      >
+                        <div class="accordion-body">
+                          TRN MT1 in Ear Monitor Earbuds, FEDAI TRN MT1 in-Ear
+                          Earbud with 10mm Composite Magnetic Dynamic in-Ear
+                          Earphone Headphones HiFi Headset with Detachable C Pin
+                          0.75MM Cable.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Specifications -->
+                  <div class="accordion mt-2" id="specsAccordion4">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#specs4"
+                        >
+                          Spesifikasi
+                        </button>
+                      </h2>
+                      <div id="specs4" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled mb-0">
+                            <li>Brand: FEDAI</li>
+                            <li>Color: Black, Blue</li>
+                            <li>Ear Placement: On Ear</li>
+                            <li>Form Factor: In Ear</li>
+                            <li>Impedance: 22 Ohm</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  onclick="window.location.href='order.html'"
+                  class="btn w-100"
+                  style="background-color: #e69816; color: white"
+                >
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <!-- Carousel untuk Product 5 -->
+              <div
+                id="carousel5"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+              >
+                <div class="carousel-inner rounded-top">
+                  <div class="carousel-item active">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/hpn 5.png"
+                        alt="LUDOS Ultra Wired Orange"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/5 slide 2.png"
+                        alt="LUDOS Ultra Wired Black"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold">LUDOS Ultra Wired</h5>
+                <p class="fw-semibold fs-5" style="color: #e69816">
+                  IDR 297.639
+                </p>
+
+                <!-- Quantity Selector -->
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="text-secondary">Jumlah:</span>
+                  <div class="d-flex align-items-center gap-2">
+                    <button
+                      onclick="decreaseQuantity('quantity5')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <span class="fs-5 fw-semibold px-2" id="quantity5">1</span>
+                    <button
+                      onclick="increaseQuantity('quantity5')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Product Info Accordion -->
+                <div class="mb-3">
+                  <!-- Description -->
+                  <div class="accordion" id="descriptionAccordion5">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#description5"
+                        >
+                          Deskripsi
+                        </button>
+                      </h2>
+                      <div
+                        id="description5"
+                        class="accordion-collapse collapse"
+                      >
+                        <div class="accordion-body">
+                          LUDOS Ultra Wired Earbuds in-Ear Headphones, 5 Years
+                          Warranty, Earphones with Microphone, Noise Isolating
+                          Ear Buds, Memory Foam for iPhone, Samsung, School
+                          Students, Kids, Women, Small Ears.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Specifications -->
+                  <div class="accordion mt-2" id="specsAccordion5">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#specs5"
+                        >
+                          Spesifikasi
+                        </button>
+                      </h2>
+                      <div id="specs5" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled mb-0">
+                            <li>Brand: LUDOS</li>
+                            <li>Color: Black, Orange</li>
+                            <li>Ear Placement: In Ear</li>
+                            <li>Form Factor: In Ear</li>
+                            <li>Impedance: 32 Ohm</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  onclick="window.location.href='order.html'"
+                  class="btn w-100"
+                  style="background-color: #e69816; color: white"
+                >
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <!-- Carousel untuk Product 6 -->
+              <div
+                id="carousel6"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+              >
+                <div class="carousel-inner rounded-top">
+                  <div class="carousel-item active">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/hpn 6.png"
+                        alt="HYIEAR Wireless Earbuds Black"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div
+                      class="bg-light p-4 d-flex align-items-center justify-content-center"
+                      style="height: 300px"
+                    >
+                      <img
+                        src="properti/6 slide 2.png"
+                        alt="HYIEAR Wireless Earbuds White"
+                        class="img-fluid"
+                        style="max-height: 100%; object-fit: contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold">HYIEAR Wireless Earbuds</h5>
+                <p class="fw-semibold fs-5" style="color: #e69816">
+                  IDR 266.573
+                </p>
+
+                <!-- Quantity Selector -->
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="text-secondary">Jumlah:</span>
+                  <div class="d-flex align-items-center gap-2">
+                    <button
+                      onclick="decreaseQuantity('quantity6')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <span class="fs-5 fw-semibold px-2" id="quantity6">1</span>
+                    <button
+                      onclick="increaseQuantity('quantity6')"
+                      class="btn btn-sm"
+                      style="border-color: #e69816; color: #e69816"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Product Info Accordion -->
+                <div class="mb-3">
+                  <!-- Description -->
+                  <div class="accordion" id="descriptionAccordion6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#description6"
+                        >
+                          Deskripsi
+                        </button>
+                      </h2>
+                      <div
+                        id="description6"
+                        class="accordion-collapse collapse"
+                      >
+                        <div class="accordion-body">
+                          HYIEAR Wireless Earbuds, Bluetooth Earbuds V5.3, 40H
+                          Playtime, LED Display, IPX5 Waterproof Bluetooth
+                          Headphones with Mic, Support Wireless Charging.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Specifications -->
+                  <div class="accordion mt-2" id="specsAccordion6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#specs6"
+                        >
+                          Spesifikasi
+                        </button>
+                      </h2>
+                      <div id="specs6" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled mb-0">
+                            <li>Brand: HYIEAR</li>
+                            <li>Color: Black, White</li>
+                            <li>Ear Placement: In Ear</li>
+                            <li>Form Factor: In Ear</li>
+                            <li>Headphones Jack: USB</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  onclick="window.location.href='order.html'"
+                  class="btn w-100"
+                  style="background-color: #e69816; color: white"
+                >
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="text-center p-4 border-top bg-black text-white">
+      <div class="container mt-3">
+        <div class="row">
+          <!-- Informasi Toko -->
+          <div class="col-md-4">
+            <h6 class="text-uppercase fw-bold">StudioNada</h6>
+            <p>
+              High-quality headphones and earphones to elevate your sound
+              experience.
+            </p>
+          </div>
+          <!-- Kontak -->
+          <div class="col-md-4">
+            <h6 class="text-uppercase fw-bold">Contact Us</h6>
+            <p>Email: support@studionada.com</p>
+            <p>Phone: +62 812 3456 7890</p>
+            <p>Address: Jl. Mugas No. 1, Semarang, Indonesia</p>
+          </div>
+          <!-- Media Sosial -->
+          <div class="col-md-4">
+            <h6 class="text-uppercase fw-bold">Follow Us</h6>
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4 border-top pt-3">
+        &copy; 2024 StudioNada | All rights reserved.
+      </div>
+    </div>
+    <!-- END FOOTER -->
+
+    <!-- BOOTSTRAP JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Update script untuk quantity -->
+    <script>
+      function increaseQuantity(id) {
+        const quantityElement = document.getElementById(id);
+        let currentQuantity = parseInt(quantityElement.textContent);
+        quantityElement.textContent = currentQuantity + 1;
+      }
+
+      function decreaseQuantity(id) {
+        const quantityElement = document.getElementById(id);
+        let currentQuantity = parseInt(quantityElement.textContent);
+        if (currentQuantity > 1) {
+          quantityElement.textContent = currentQuantity - 1;
+        }
+      }
+    </script>
+  </body>
+</html>
